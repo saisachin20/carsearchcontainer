@@ -1,0 +1,16 @@
+img.carimage
+{
+    height: 120px;
+    max-width: initial;
+    pointer-events: none;
+}
+.tile
+{
+    padding: 8px;
+    border-radius: 0.25rem;
+}
+p.ownertitle
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}

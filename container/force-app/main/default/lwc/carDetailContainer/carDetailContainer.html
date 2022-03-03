@@ -1,0 +1,15 @@
+<template>
+    <template if:true={isCarSelected}>
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Car Details">
+                <c-car-details car={carName}></c-car-details>
+            </lightning-tab>
+            <lightning-tab label="Add Experiences">
+                Two Content !
+            </lightning-tab>
+            <lightning-tab label="View Experiences">
+                Three Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </template>
+</template>

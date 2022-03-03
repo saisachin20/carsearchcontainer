@@ -1,0 +1,19 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-combobox name="cartypes"  value="" placeholder="All Types"
+                options={carTypeList} variant="label-hidden" onchange={handleCarTypeChangeEvent}>
+            </lightning-combobox>
+        </lightning-layout-item>
+
+
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-button variant="brand" label="New" title="New" class="slds-m-left_x-small" onclick={NewButtonClick}></lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-button variant="brand-outline" label="New Account" title="New Account" class="slds-m-left_x-small" onclick={NewButtonClickMe}></lightning-button>
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

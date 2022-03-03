@@ -1,0 +1,11 @@
+<template>
+
+<lightning-layout multiple-rows horizontal-align="center">
+    <template for:each={Carslst} for:item="cardetail">
+        <lightning-layout-item  key={cardetail.Id} size="12" small-device-size="6" large-device-size="4" medium-device-size="3">
+            <c-car-tile car={cardetail}></c-car-tile>
+        </lightning-layout-item>
+    </template>
+</lightning-layout>
+    
+</template>
