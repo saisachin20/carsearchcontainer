@@ -10,7 +10,7 @@ import CAR_BUILDYEAR from '@salesforce/schema/Car__c.Build_Year__c';
 import CAR_RENT from '@salesforce/schema/Car__c.Per_Day_Rent__c';
 import CAR_PICTURE from '@salesforce/schema/Car__c.Picture__c';
 
-const fieldtobefetched =[
+const fields =[
     CAR_ID,CAR_NAME,CAR_BUILDYEAR,CAR_RENT,CAR_PICTURE
 ];
 
@@ -18,10 +18,13 @@ export default class CarDetailContainer extends LightningElement {
 
 
     selectedCarId;
+
+    selectedTabValue;
+
     @wire(CurrentPageReference)
     pageRef;
 
-    @wire(getRecord,{recordId: '$selectedCarId',fieldtobefetched})
+    @wire(getRecord,{recordId: '$selectedCarId',fields})
     selectedcardata;
 
     connectedCallback()
@@ -48,5 +51,9 @@ export default class CarDetailContainer extends LightningElement {
         {
             return false;
         }
+    }
+    tabChangeHandler(event)
+    {
+        this.selectedTabValue = event.target.value;
     }
 }

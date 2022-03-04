@@ -1,5 +1,30 @@
 <template>
     <lightning-card title={carName} icon-name="utility:setup_assistant_guide">
-        <lightning-button label ="Full Details" variant="brand"></lightning-button>
+        <div slot="actions">
+            <lightning-button label="Full Details" variant="brand" onclick={redirectToCarPage}></lightning-button>
+        </div>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6" large-device-size="6" medium-device-size="6">
+
+                <div class="slds-p-around_small">
+                    <div class="carproperty">
+                        <span class="label">Build Year:</span>
+                        <lightning-formatted-number value={BuildYear}></lightning-formatted-number>
+                    </div>
+                </div>
+                <div class="slds-p-around_small">
+                <div class="carproperty">
+                    <span class="label">Per Day Rent:</span>
+                    <lightning-formatted-number value={PerDayRent} currency-code="INR"></lightning-formatted-number>
+                </div>
+                </div>
+
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" large-device-size="6" medium-device-size="6">
+                <img src={Picture} alt="Car Pic" class="imageview slds-align_absolute-center" />
+            </lightning-layout-item>
+        </lightning-layout>
+
     </lightning-card>
 </template>
